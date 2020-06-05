@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital@1&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header__title">
+                <h1>Gestor De Presupuesto</h1>
+            </div>
+            <div class="header__subtitle">
+                <h2>Administra tu Presupuesto Semanal</h2>
+            </div>
+        </header>
+        <div class="prompt" id="prompt">
+            <div class="prompt__wrapper">
+                <form action="" class="form__prompt" id="form__prompt">
+                    <label for="presupuesto" class="label__prompt">Ingresa tu presupuesto aqui: </label>
+                    <input type="text" name="presupuesto" id="presupuesto" class="form__input input__prompt">
+                    <div class="btn">
+                        <button type="submit" class="btn__prompt" id="btn__aceptar">Aceptar</button>
+                        <button type="button" class="btn__insertar" id="btn__insertar">Ir al Formulario de Gastos</button>
+                    </div>
+                    
+                </form>
+            </div>
+            
+        </div>
+        <main class="main">
+            <div class="main__wrapper">
+                <div class="main__form">
+                    <form action="" class="form" id="form">
+                        <div class="form__group">
+                            <label for="gasto" class="form__label">Gasto:</label>
+                            <input type="text" name="gasto" id="gasto" class="form__input" placeholder="Nombre del gasto">
+                        </div>
+
+                        <div class="form__group">
+                            <label for="costo" class="form__label">Costo:</label>
+                            <input type="text" name="costo" id="costo" class="form__input" placeholder="Costo del gasto en $">
+                        </div>
+
+                        <button type="submit" class="btn__submit" id="btn__submit">Agregar</button>
+                    </form>
+                </div>
+
+                <div class="main__results">
+                     <div class="gastos" id="gastos_container"></div>
+
+                     <div class="totales">
+                         <div class="presupuesto totales__card">
+                             <p class="totales__p">Presupuesto: $ <span id="presupuesto__span" class="presupuesto__span"></span></p>
+                         </div>
+
+                         <div id="restante" class="restante totales__card">
+                            <p class="totales__p">Restante: $ <span id="restante__span" class="presupuesto__span"></span></p>
+                        </div>
+
+                        
+                     </div>
+
+                     <button type="button" class="btn__eliminar" id="btn__eliminar">Eliminar Todo</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/prompt.js"></script>
+    <script src="js/index.js"></script>
+    
+    
+</body>
+</html>
